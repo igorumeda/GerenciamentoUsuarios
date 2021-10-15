@@ -1,0 +1,41 @@
+﻿@model IEnumerable<GerenciamentoUsuarios.Models.PerfilUsuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Perfil dos Usuários</h1>
+
+<p>
+    <a asp-action="Create">Criar novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Usuário
+            </th>
+            <th>
+                Tipo
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdentityUser.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoUsuario.NomeTipoUsuario)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Excluir</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

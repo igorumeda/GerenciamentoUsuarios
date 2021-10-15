@@ -1,0 +1,33 @@
+﻿@model IEnumerable<GerenciamentoUsuarios.Models.AcessoTipoUsuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Permissões do Tipo do Usuário</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeFuncionalidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoUsuario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeFuncionalidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoUsuario.NomeTipoUsuario)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

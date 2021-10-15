@@ -1,0 +1,42 @@
+﻿@model IEnumerable<GerenciamentoUsuarios.Models.LogAuditoria>
+
+@{
+    ViewData["Title"] = "Log de Movimentações";
+}
+
+<h1>Logs de movimentações</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataHora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataHora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

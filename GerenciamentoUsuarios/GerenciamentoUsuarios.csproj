@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-GerenciamentoUsuarios-DCB27564-1E6B-45B3-B09F-5A125CDB20EC</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20211014003036_CreateLog.cs" />
+    <Compile Remove="Data\Migrations\20211014003036_CreateLog.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211014010950_CreateLogAuditoria.cs" />
+    <Compile Remove="Data\Migrations\20211014010950_CreateLogAuditoria.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211014012140_CreateLog.cs" />
+    <Compile Remove="Data\Migrations\20211014012140_CreateLog.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211014012550_CreateLog.cs" />
+    <Compile Remove="Data\Migrations\20211014012550_CreateLog.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Identity\Account\src\3tecnos.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Identity\Account\src\3tecnos.png" />
+    <None Include="wwwroot\src\3tecnos.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.18" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.20">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+</Project>

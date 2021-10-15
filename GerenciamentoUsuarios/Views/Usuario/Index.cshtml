@@ -1,0 +1,29 @@
+﻿@model IEnumerable<GerenciamentoUsuarios.Models.Usuario>;
+
+@{
+    ViewData["Title"] = "Usuários";
+}
+
+<h1>Usuários</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Tipo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
